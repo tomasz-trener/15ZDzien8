@@ -91,7 +91,8 @@ namespace P02AplikacjaZawodnicy
                 miasto = zawodnik.Miasto,
                 kraj = zawodnik.Kraj,
                 waga = zawodnik.Waga,
-                wzrost = zawodnik.Wzrost
+                wzrost = zawodnik.Wzrost,
+                data_ur = zawodnik.DataUr,
             };
 
             db.Zawodnik.InsertOnSubmit(nowy);

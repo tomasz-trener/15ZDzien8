@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02AplikacjaZawodnicy", "P0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03Wstawki", "P03Wstawki\P03Wstawki.csproj", "{843EB40E-3771-4CEA-BEBB-13585811DEA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04PolaczenieZExelem", "P04PolaczenieZExelem\P04PolaczenieZExelem.csproj", "{169074F6-3AF2-41E8-86DC-7C759E00CE25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{843EB40E-3771-4CEA-BEBB-13585811DEA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{843EB40E-3771-4CEA-BEBB-13585811DEA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{843EB40E-3771-4CEA-BEBB-13585811DEA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{169074F6-3AF2-41E8-86DC-7C759E00CE25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{169074F6-3AF2-41E8-86DC-7C759E00CE25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{169074F6-3AF2-41E8-86DC-7C759E00CE25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{169074F6-3AF2-41E8-86DC-7C759E00CE25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

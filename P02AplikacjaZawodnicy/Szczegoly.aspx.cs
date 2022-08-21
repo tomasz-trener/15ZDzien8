@@ -55,6 +55,7 @@ namespace P02AplikacjaZawodnicy
                 z.DataUr = Convert.ToDateTime(txtDataUr.Text);
                 z.Waga = Convert.ToInt32(txtWaga.Text);
                 z.Wzrost = Convert.ToInt32(txtWzrost.Text);
+                z.Miasto = txtMiasto.Text;
 
                 if (id > 0)
                     zr.Edytuj(z);
