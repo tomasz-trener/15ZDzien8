@@ -29,7 +29,8 @@
             <br />
             <asp:Button ID="btnWczytaj" OnClick="btnWczytaj_Click" runat="server" Text="Wczytaj" />
             <br />
-
+            <asp:Button ID="btnZapisz" OnClick="btnZapisz_Click" runat="server" Text="Zapisz" />
+           
 
         
         </div>

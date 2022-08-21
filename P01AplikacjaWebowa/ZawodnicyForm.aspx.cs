@@ -30,6 +30,11 @@ namespace P01AplikacjaWebowa
 
         protected void btnWczytaj_Click(object sender, EventArgs e)
         {
+            Odswiez();
+        }
+
+        private void Odswiez()
+        {
             string filtr = txtFiltr.Text;
             string sortowanie = "";
 
@@ -61,6 +66,26 @@ namespace P01AplikacjaWebowa
             txtDataUr.Text = z.DataUr.ToString();
             txtWzrost.Text = z.Wzrost.ToString();
             txtWaga.Text = z.Waga.ToString();
+        }
+
+        protected void btnZapisz_Click(object sender, EventArgs e)
+        {
+            string zaznaczone = lbDane.SelectedValue;
+
+            ZawodnicyRepository zr = new ZawodnicyRepository();
+
+            ZawodnikVM z = new ZawodnikVM();
+            z.Id_zawodnika = Convert.ToInt32(zaznaczone);
+            z.Imie = txtImie.Text;
+            z.Nazwisko = txtNazwisko.Text;
+            z.Kraj = txtKraj.Text;
+            z.DataUr = Convert.ToDateTime(txtDataUr.Text);
+            z.Miasto = txtMiasto.Text;
+            z.Wzrost = Convert.ToInt32(txtWzrost.Text);
+            z.Waga = Convert.ToInt32(txtWaga.Text);
+
+            zr.Edytuj(z);
+            Odswiez();
         }
     }
 }
