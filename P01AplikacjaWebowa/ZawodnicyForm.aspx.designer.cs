@@ -105,6 +105,24 @@ namespace P01AplikacjaWebowa
         protected global::System.Web.UI.WebControls.Button btnZapisz;
 
         /// <summary>
+        /// btnUsun control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUsun;
+
+        /// <summary>
+        /// btnNowy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNowy;
+
+        /// <summary>
         /// txtImie control.
         /// </summary>
         /// <remarks>

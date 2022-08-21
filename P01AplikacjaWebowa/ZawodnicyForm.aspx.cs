@@ -73,18 +73,49 @@ namespace P01AplikacjaWebowa
             string zaznaczone = lbDane.SelectedValue;
 
             ZawodnicyRepository zr = new ZawodnicyRepository();
-
-            ZawodnikVM z = new ZawodnikVM();
+            ZawodnikVM z = ZczytajZawodnika();
             z.Id_zawodnika = Convert.ToInt32(zaznaczone);
+
+            zr.Edytuj(z);
+            Odswiez();
+        }
+
+        private ZawodnikVM ZczytajZawodnika()
+        {
+            ZawodnikVM z = new ZawodnikVM();
+
             z.Imie = txtImie.Text;
             z.Nazwisko = txtNazwisko.Text;
             z.Kraj = txtKraj.Text;
-            z.DataUr = Convert.ToDateTime(txtDataUr.Text);
-            z.Miasto = txtMiasto.Text;
-            z.Wzrost = Convert.ToInt32(txtWzrost.Text);
-            z.Waga = Convert.ToInt32(txtWaga.Text);
+            if (!string.IsNullOrEmpty(txtDataUr.Text))
+                z.DataUr = Convert.ToDateTime(txtDataUr.Text);
 
-            zr.Edytuj(z);
+            z.Miasto = txtMiasto.Text;
+            if (!string.IsNullOrEmpty(txtWzrost.Text))
+                z.Wzrost = Convert.ToInt32(txtWzrost.Text);
+            if (!string.IsNullOrEmpty(txtWaga.Text))
+                z.Waga = Convert.ToInt32(txtWaga.Text);
+            return z;
+        }
+
+        protected void btnUsun_Click(object sender, EventArgs e)
+        {
+            string zaznaczone = lbDane.SelectedValue;
+
+            ZawodnicyRepository zr = new ZawodnicyRepository();
+            ZawodnikVM z = new ZawodnikVM()
+            {
+                Id_zawodnika = Convert.ToInt32(zaznaczone),
+            };
+            zr.UsunZawodnika(z);
+            Odswiez();
+        }
+
+        protected void btnNowy_Click(object sender, EventArgs e)
+        {
+            var z = ZczytajZawodnika();
+            ZawodnicyRepository zr = new ZawodnicyRepository();
+            zr.DodajZawodnika(z);
             Odswiez();
         }
     }

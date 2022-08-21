@@ -30,8 +30,11 @@
             <asp:Button ID="btnWczytaj" OnClick="btnWczytaj_Click" runat="server" Text="Wczytaj" />
             <br />
             <asp:Button ID="btnZapisz" OnClick="btnZapisz_Click" runat="server" Text="Zapisz" />
-           
-
+            <br />
+            <asp:Button ID="btnUsun" OnClick="btnUsun_Click" runat="server" Text="Usuń" />
+            <br />
+            <asp:Button ID="btnNowy" OnClick="btnNowy_Click" runat="server" Text="Nowy" />
+            
         
         </div>
         <div style="float:left">
